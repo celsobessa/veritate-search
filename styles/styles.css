@@ -58,6 +58,66 @@
     color: #ccc;
 }
 
+/* ALGOLIA */
+#search-box{
+  width: 95%;
+  width: calc(100% - 38px);
+}
+.ais-search-box {
+  width: 100%;
+}
+.ais-search-box--input {
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255, 0.75);
+    display: block;
+    font-size: 16px;
+    font-family: "Helvetica","Arial",sans-serif;
+    margin: 0;
+    padding: 4px 0;
+    width: 100%;
+    background: 0 0;
+    text-align: left;
+    color: inherit;
+}
+
+.ais-search-box--input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ccc;
+    opacity: 1; /* Firefox */
+}
+
+.ais-search-box--input::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ccc;
+}
+
+.ais-search-box--input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ccc;
+}
+
+.ais-search-box--reset-wrapper {
+  display: block;
+}
+
+.ais-search-box--reset {
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.ais-search-box--reset svg {
+    display: block;
+    width: 12px;
+    height: 12px;
+}
+
+#hits .mdl-card__title-text {
+  font-size: 21px;
+  font-size: 1.5rem;
+}
+
+/* END ALGOLIA */
+
 .portfolio-logo-row {
   min-height: 100px;
   padding-left: 40px;

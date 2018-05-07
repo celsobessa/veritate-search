@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-indigo.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <style>
     #view-source {
       position: fixed;
@@ -74,15 +74,12 @@
               </nav>
             </div>
           </div>
-          <div class="mdl-layout__header-row portfolio-logo-row">
-            <form action="#">
-              <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-                <i class="material-icons">search</i>
-              </label>
+          <div class="mdl-layout__header-row">
+             <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+            <i class="material-icons">search</i>
+          </label>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="search-wrapper">
-                <input class="mdl-textfield__input" type="text" id="search" placeholder="Digite uma palavra-chave" aria-placeholder="digite uma palavra-chave ou nome">
               </div>
-            </form>
           </div>
         </header>
       <div class="mdl-layout__drawer mdl-layout--small-screen-only">
@@ -94,7 +91,21 @@
         </nav>
       </div>
       <main class="mdl-layout__content">
-        <div class="mdl-grid main-grid">
+        <div class="mdl-grid main-grid" id="hits">
+          <!-- <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+            <div class="mdl-card__media">
+              <img class="article-image" src="https://veritatecrawler.wowperations.com.br/wp-content/uploads/2018/05/truco-os-exageros-e-imprecisoes-nas-falas-de-alvaro-dias-256x256.jpg" border="0" alt="">
+            </div>
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Os exageros e imprecisões nas falas de Álvaro Dias</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>Pré-candidato do Podemos citou dado falso sobre sua aprovação como governador e acertou parcela de brasileiros abaixo da linha de pobreza</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Leia em Agência Pública</a>
+            </div>
+          </div>-->
           <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
             <div class="mdl-card__media">
               <img class="article-image" src="https://veritatecrawler.wowperations.com.br/wp-content/uploads/2018/05/truco-os-exageros-e-imprecisoes-nas-falas-de-alvaro-dias-256x256.jpg" border="0" alt="">
@@ -180,6 +191,9 @@
             </div>
           </div>
         </div>
+        <div class="mdl-grid" id="pagination">
+            <!-- Pagination widget will appear here -->
+        </div>
         <footer class="mdl-mini-footer">
           <div class="mdl-mini-footer__left-section">
             <div class="mdl-logo">Veritate - Busca de Checagens</div>
@@ -204,5 +218,7 @@
       </main>
     </div>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.4"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
