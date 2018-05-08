@@ -1,3 +1,6 @@
+body {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
 .portfolio-header {
   position: relative;
   background-image: url(images/header-bg.jpg);
@@ -17,7 +20,6 @@
   width: 98%;
   width: calc(100% - 48px);
 }
-
 .main-title small {
   font-size: .5em;
   display: block;
@@ -25,10 +27,6 @@
 
 .is-compact .mdl-layout__title span {
   display: none;
-}
-
-.portfolio-logo-row form {
-  width: 100%;
 }
 
 .mdl-layout__header-row .mdl-navigation__link {
@@ -116,29 +114,49 @@
   font-size: 1.5rem;
 }
 
+.ais-hits--item .mdl-card__title-text a {
+    color: #000;
+    text-decoration: none;
+}
+.ais-hits--item .mdl-card__title-text a:hover {
+    color: #663ab7;
+}
+
+#pagination>div {
+    display: block;
+    margin: 0 auto;
+}
+.ais-pagination {
+    -webkit-padding-start: 0;
+}
+.ais-pagination--item {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.ais-pagination--item a {
+     display: block;
+  text-decoration: none;
+}
+.ais-pagination--item__previous a,
+.ais-pagination--item__next a{
+  color:#fff;
+}
+.ais-pagination--item.disabled {
+    background-color: rgba(0,0,0,.12);
+    color: rgba(0,0,0,.26);
+    box-shadow: none;
+    cursor: default;
+}
+.disabled.mdl-button--raised.mdl-button--colored:hover {
+    background-color: rgba(0,0,0,.12);
+}
 /* END ALGOLIA */
 
-.portfolio-logo-row {
-  min-height: 100px;
-  padding-left: 40px;
-}
-
-.is-compact .portfolio-logo-row {
-  min-height: auto;
-}
-
-.portfolio-logo {
-  background: url(images/logo.png) 50% no-repeat;
-  background-size: cover;
-  height: 150px;
-  width: 150px;
-  margin: auto auto 10px;
-}
-
-.is-compact .portfolio-logo {
-  height: 50px;
-  width: 50px;
-  margin-top: 7px;
+.search .mdl-layout__content{
+  background-color: #eee;
 }
 
 .portfolio-navigation-row {
@@ -197,8 +215,13 @@
   background: url(images/example-blog06.jpg) center / cover;
 }
 
-.portfolio-blog-card-compact .mdl-card__title {
-  padding-bottom: 0;
+.search .mdl-card__media {
+    border: 1px solid #999;
+    border-bottom-width: 2px;
+}
+
+.search .mdl-card.mdl-cell {
+    margin-bottom: 16px;
 }
 
 .portfolio-blog-card-bg > .mdl-card__actions {
@@ -262,11 +285,6 @@ img.article-image {
   margin: auto;
 }
 
-footer {
-  background-image: url(images/footer-background.png);
-  background-size: cover;
-}
-
 @media screen and (max-width: 1024px) {
 
   .portfolio-logo-row {
@@ -277,6 +295,12 @@ footer {
     text-align: center;
   }
 
+}
+
+@media screen and (min-width: 480px) {
+  .search .mdl-card.mdl-cell {
+      margin-bottom: 24px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
