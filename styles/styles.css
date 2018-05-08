@@ -1,3 +1,15 @@
+/*
+Project: Veritate Fact Check Search
+Description: A search interface for fact checking articles using Veritate Initiative Public Index and API
+Version:     0.2.0
+Author:      Celso Bessa
+Author URI:  https://www.celsobessa.com.br
+License:     GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+*/
+body {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
 .portfolio-header {
   position: relative;
   background-image: url(images/header-bg.jpg);
@@ -10,14 +22,14 @@
           justify-content: center;
 }
 
-.mdl-layout__title {
+.main-title {
   font-size: 24px;
   font-size: 1.8rem;
   line-height: 0.75;
   width: 98%;
   width: calc(100% - 48px);
+  font-family: "Roboto Slab","Roboto","Helvetica","Arial",sans-serif;
 }
-
 .main-title small {
   font-size: .5em;
   display: block;
@@ -25,10 +37,6 @@
 
 .is-compact .mdl-layout__title span {
   display: none;
-}
-
-.portfolio-logo-row form {
-  width: 100%;
 }
 
 .mdl-layout__header-row .mdl-navigation__link {
@@ -58,27 +66,106 @@
     color: #ccc;
 }
 
-.portfolio-logo-row {
-  min-height: 100px;
-  padding-left: 40px;
+/* ALGOLIA */
+#search-box{
+  width: 95%;
+  width: calc(100% - 38px);
+}
+.ais-search-box {
+  width: 100%;
+}
+.ais-search-box--input {
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255, 0.75);
+    display: block;
+    font-size: 16px;
+    font-family: "Helvetica","Arial",sans-serif;
+    margin: 0;
+    padding: 4px 0;
+    width: 100%;
+    background: 0 0;
+    text-align: left;
+    color: inherit;
 }
 
-.is-compact .portfolio-logo-row {
-  min-height: auto;
+.ais-search-box--input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ccc;
+    opacity: 1; /* Firefox */
 }
 
-.portfolio-logo {
-  background: url(images/logo.png) 50% no-repeat;
-  background-size: cover;
-  height: 150px;
-  width: 150px;
-  margin: auto auto 10px;
+.ais-search-box--input::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ccc;
 }
 
-.is-compact .portfolio-logo {
-  height: 50px;
-  width: 50px;
-  margin-top: 7px;
+.ais-search-box--input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ccc;
+}
+
+.ais-search-box--reset-wrapper {
+  display: block;
+}
+
+.ais-search-box--reset {
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.ais-search-box--reset svg {
+    display: block;
+    width: 12px;
+    height: 12px;
+}
+
+#hits .mdl-card__title-text {
+  font-size: 21px;
+  font-size: 1.5rem;
+}
+
+.ais-hits--item .mdl-card__title-text a {
+    color: #000;
+    text-decoration: none;
+}
+.ais-hits--item .mdl-card__title-text a:hover {
+    color: #663ab7;
+}
+
+#pagination>div {
+    display: block;
+    margin: 0 auto;
+}
+.ais-pagination {
+    -webkit-padding-start: 0;
+}
+.ais-pagination--item {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 8px;
+    font-size: 18px;
+}
+.ais-pagination--item a {
+    display: block;
+    text-decoration: none;
+}
+.ais-pagination--item__previous a,
+.ais-pagination--item__next a{
+  color:#fff;
+}
+.ais-pagination--item.disabled {
+    background-color: rgba(0,0,0,.12);
+    color: rgba(0,0,0,.26);
+    box-shadow: none;
+    cursor: default;
+}
+.disabled.mdl-button--raised.mdl-button--colored:hover {
+    background-color: rgba(0,0,0,.12);
+}
+/* END ALGOLIA */
+
+.search .mdl-layout__content{
+  background-color: #eee;
 }
 
 .portfolio-navigation-row {
@@ -137,8 +224,13 @@
   background: url(images/example-blog06.jpg) center / cover;
 }
 
-.portfolio-blog-card-compact .mdl-card__title {
-  padding-bottom: 0;
+.search .mdl-card__media {
+    border: 1px solid #999;
+    border-bottom-width: 2px;
+}
+
+.search .mdl-card.mdl-cell {
+    margin-bottom: 16px;
 }
 
 .portfolio-blog-card-bg > .mdl-card__actions {
@@ -202,11 +294,6 @@ img.article-image {
   margin: auto;
 }
 
-footer {
-  background-image: url(images/footer-background.png);
-  background-size: cover;
-}
-
 @media screen and (max-width: 1024px) {
 
   .portfolio-logo-row {
@@ -217,6 +304,12 @@ footer {
     text-align: center;
   }
 
+}
+
+@media screen and (min-width: 480px) {
+  .search .mdl-card.mdl-cell {
+      margin-bottom: 24px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
