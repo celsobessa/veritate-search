@@ -13,12 +13,13 @@ body {
           justify-content: center;
 }
 
-.mdl-layout__title {
+.main-title {
   font-size: 24px;
   font-size: 1.8rem;
   line-height: 0.75;
   width: 98%;
   width: calc(100% - 48px);
+  font-family: "Roboto Slab","Roboto","Helvetica","Arial",sans-serif;
 }
 .main-title small {
   font-size: .5em;
@@ -134,11 +135,10 @@ body {
     padding-right: 0;
     margin-left: 8px;
     font-size: 18px;
-    font-weight: 600;
 }
 .ais-pagination--item a {
-     display: block;
-  text-decoration: none;
+    display: block;
+    text-decoration: none;
 }
 .ais-pagination--item__previous a,
 .ais-pagination--item__next a{

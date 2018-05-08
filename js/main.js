@@ -2,14 +2,15 @@
 const search = instantsearch({
   appId: 'H1N2UD238G',
   apiKey: '709235eadbf23a3d2f297ca22e205aed',
-  indexName: 'veritate_poc_3posts_post'
+  indexName: 'veritate_poc_3posts_post',
+  routing: true
 });
 
 // initialize SearchBox
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search-wrapper',
-    placeholder: 'digite uma palavra-chave ou nome',
+    placeholder: 'digite uma palavra-chave e ENTER',
     magnifier: false,
     searchOnEnterKeyPressOnly: true,
   })
