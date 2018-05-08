@@ -1,3 +1,12 @@
+/*
+Project: Veritate Fact Check Search
+Description: A search interface for fact checking articles using Veritate Initiative Public Index and API
+Version:     0.2.0
+Author:      Celso Bessa
+Author URI:  https://www.celsobessa.com.br
+License:     GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+*/
 body {
   font-family: "Roboto","Helvetica","Arial",sans-serif;
 }

@@ -1,7 +1,7 @@
 # Changelog
 Project: Veritate Fact Check Search
 Description: A search interface for fact checking articles using Veritate Initiative Public Index and API
-Version:     0.1.0
+Version:     0.2.0
 Author:      Celso Bessa
 Author URI:  https://www.celsobessa.com.br
 License:     GPL-2.0+
@@ -9,6 +9,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/)
+
+## 0.2.0 - [2018-05-08]
+
+## Added
+- resource hints
+- webmanifest
+- initial search functionality with Algolia
+- performance and security settings using .htaccess
+
+## Changed
+- meta descriptions in portuguese
+- favicon and apps icons
+- async Google Fonts
+- search placeholder
+- style tweaks
+
+## Fixed
+- HTML language
 
 ## 0.1.0 - [2018-05-07]
 
