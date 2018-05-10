@@ -7,18 +7,17 @@ Veritate é um projeto um **projeto experimental sem fins lucrativos** de agrega
 
 <hr>
 
-Prova de conceito tem lançamento previsto para 7 de Maio de 2018.
-
 > Para mais informações, para solicitar a inclusão de um site de checagem ou solicitar exclusão de material que viole direitos autorais, entre em contato através do email veritate{arroba}wowperations[ponto]com[ponto]br
 
 ## Sobre a iniciativa
 
 Idealizado pelo desenvolvedor <a href="https://www.celsobessa.com.br">Celso Bessa</a>, com suporte em hospedagem e infra-estrutura: <a href="https://www.wowperations.com.br">WoWPerations</a>, a iniciativa  Veritate tem como objetivos:
 
-- Investigar, estudar e experimentar tecnologias, algoritmo, padrões de design e experiência de uso em buscas e jornalismo intermediado por algoritmo
-- Fomentar o consumo de jornalismo de qualidade e o compartilhamento de checagem de fatos e instigar o senso crítico contra notícias falsas (_Fake News_)
-- Instigar o compartilhamento de checagens de fatos e o pensamento crítico contra notícias falsas
-- Instigar o pensamento crítico e decisões bem informadas sobre políticas e votos.
+- Incentivar o consumo de jornalismo de qualidade
+- Estimular o compartilhamento de checagens de fatos
+- Instigar o senso crítico a respeito de notícias falsas (_Fake News_)
+- Fornecer uma ferramenta que ajude as pessoas a tomar decisões baseadas em informações verídicas
+- Investigar, estudar e experimentar tecnologias, algoritmo, padrões de design, experiência de uso em buscas, e jornalismo intermediado por algoritmo
 
 Inicialmente, a iniciativa terá os seguintes componentes: Indexador, Índice Público/API, e Agregador.
 
@@ -62,7 +61,7 @@ Não! Ao contrário, os objetivos são gerar MAIS tráfego e melhorar ao alcance
 
 ### Esta iniciativa atrapalha o SEO deste sites?
 
-Não. Como é uma API, apenas deixa os dados acessíveis, mas não conta como conteúdo para buscadores
+Não. Como é uma API, apenas deixa os dados acessíveis, mas não conta como conteúdo para buscadores.
 
 ### Esta iniciativa tem um objetivo comercial?
 
