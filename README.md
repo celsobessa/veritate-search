@@ -7,7 +7,7 @@ Veritate é um projeto um **projeto experimental sem fins lucrativos** de agrega
 
 <hr>
 
-> Para mais informações, para solicitar a inclusão de um site de checagem ou solicitar exclusão de material que viole direitos autorais, entre em contato através do email veritate{arroba}wowperations[ponto]com[ponto]br
+> Para mais informações, para solicitar a inclusão de um site de checagem ou solicitar exclusão de material, visite a *[Wiki do Projeto](https://github.com/celsobessa/veritate/wiki)* ou entre em contato através do email veritate{arroba}wowperations[ponto]com[ponto]br
 
 ## Sobre a iniciativa
 
@@ -25,21 +25,8 @@ Inicialmente, a iniciativa terá os seguintes componentes: Indexador, Índice P�
 
 ![Diagrama com Visão Geral da Iniciativa Veritate - Versão 0.1.0](images/veritate-diagrama-visao-geral-0.1.0.png)
 
-### Indexador
+Para saber mais detalhes sobre cada componente, visite a *[Wiki do Projeto](https://github.com/celsobessa/veritate/wiki)*
 
-Uma ferramenta para indexação, avaliação e organização de artigos publicados em veículos de checagem de fatos.
-
-No momento, estamos utilizando um serviço de terceiro (Saas) para rastreio (crawl) e raspagem de dados (scrapping) e um sistema próprio para avaliação e organização. É possível que num futuro próximoutilizemos infra-estrutura própria para rastreio/raspagem. Eventualmente, tornaremos o sistema de avaliação público.
-
-### Índice Público (API)
-
-Um índice público com informações sobre as checagem de fatos indexadas para consumo por sistemas, que poderão consultá-lo através de uma API REST, com informações apresentadas em JSON.
-
-É a partir de sua API que alimentaremos o agregador, e serviços e sistemas de terceiros podem ser criados. Por exemplo, um plugin de WordPress que apresente checagem de fatos para alguma palavra chave sendo usada por um editor de um blog.
-
-### Agregador
-
-Uma ferramenta de busca de checagem de fatos, dirigida à pessoas. A ideia é que, por exemplo, uma pessoa procurando a expressão  "Lava Jato" veria uma série de links para checagens de fatos sobre a Operação Lava Jato no sites indexados, e ao clicar em cada link, lerá o conteúdo direto no site original.
 
 ## Perguntas Frequentes (FAQ - Frequently Asked Questions)
 
@@ -49,7 +36,14 @@ Neste momento, apenas [Agência Lupa](http://piaui.folha.uol.com.br/lupa/), [Ag�
 
 ### Como posso sugerir um veículo ou ter meu veículo adicionado?
 
-Envie um email para o endereço mencionado acima. Nós vamos indexar apenas sites respeitados ou com bom jornalismo, de acordo com nosso conselho editorial. Temos o plano de criar um guia editorial, mas não sabemos quando publicaremos.
+Se você quer sugerir algum veículo para ser indexado, abra uma "issue" [no repositório oficial](https://github.com/celsobessa/veritate/issues) com as seguintes informações:
+
+- Nome do Veículo
+- URL do veículo
+- URL da seção de checagens (se diferente da URL principal)
+- Sua relação com o veículo (leitor, autor, editor, publisher, etc)
+
+Você também pode enviar um email para o endereço mencionado acima com as mesmas informações. Nós vamos indexar apenas sites respeitados ou com bom jornalismo, de acordo com nosso conselho editorial. Temos o plano de criar um guia editorial, mas ainda não sabemos quando ele será publicado.
 
 No aspecto tecnológico, nós priorizamos sites usando WordPress e que usem o markup LD+JSON para checagem de fatos. Nosso rastreador e nosso algoritmo privilegia sites rápidos, acessíveis e seguros (usando HTTPS), especialmente os acessíveis facilmente por telefone ou leitores de tela. E se você der permissão expressão para apresentarmos pequenos trechos (entre 140 e 280 caracteres) do artigo de seu site, o conteúdo será rastreado mais rapidamente e terá prioridade ao apresentarmos os resultados
 
