@@ -1,6 +1,7 @@
 # Veritate Fact Check Search
 
-A search interface for fact checking articles using Veritate Initiative Public Index and API
+A search interface for fact checking articles using Veritate Initiative Public Index and API, parte of Veritate Initiative, an experimental project with the mission of strenghtening _fact checing_ in Brazil. Comprised by an [Crawler/Indexer](#crawler-indexer), [Public Index API](public-index-api) and **Fact Check** [Aggregator/Search](aggregator-search) for Brazilian news and politics.
+
 <hr>
 
 > **Para versão em português, [clique aqui](README.md).**
@@ -14,18 +15,21 @@ A search tool for people looking for fact checking. The idea is that people find
 
 ## About Veritate Initiative
 
-Developed by [Celso Bessa](https://www.celsobessa.com.br) with infrastructure support from [WoWPerations](https://www.wowperations.com.br), this is an experimental project, a proof of concept for a Fact Check crawler, aggregator and API focused on Brazilian news andp politics. The project goals are:
+Developed by [Celso Bessa](https://www.celsobessa.com.br) with infrastructure support from [WoWPerations](https://www.wowperations.com.br), Veritate Initiative is an experimental project with the mission of strenghtening _fact checing_ in Brazil. Comprised by an [Crawler/Indexer](#crawler-indexer), [Public Index API](public-index-api) and **Fact Check** [Aggregator/Search](aggregator-search) for Brazilian news and politics.
 
-- Investigate, study and experiment with technologia, algorhythms, UX and design patters for improve algorhythm assisted journalism.
+- Research, experiment, develop and spread technologies, algorithms, design patterns and best practices for the improvement of digital journalism.
 - Improve access to high quality journalism
 - Instigate fact checking sharing and critical thinking against _fake news_
+- To offer tools for better decision making
 - Instigate critical thinking and informed decisions about politics and votes
 
-Initially, the project will be comprised by an Crawler/Indexer, Public Index API and Aggregator.
+You can learn more about the initiative in the official repository at **[GitHub](https://github.com/celsobessa/veritate/)**.
 
 ### Veritate Overview
 
 ![A Diagram with Veritate Inatiative Overview 0.1.0](images/veritate-overview-diagram-0.1.0.png)
+
+> If you understand brazilian portuguese, there is a *[Wiki](https://github.com/celsobessa/veritate/wiki)* with more in-depth information
 
 ### Crawler/Indexer
 
@@ -51,7 +55,14 @@ Right now, just [Agência Lupa](http://piaui.folha.uol.com.br/lupa/), [Agência 
 
 ### How can my fact check outlet be indexed?
 
-Send an email (the address is above) with the outlet link. We will index only reputable and/or trustworth outlets according to our editorial. An editorial guideline is on roadmap , but we don't know when it will be published.
+You must open an issue [at the project repository](https://github.com/celsobessa/veritate/issues) with the following information
+
+- Outlet name
+- Outlet URL
+- Fact Checking section URL (if different from the main URL)
+- You Relationship with the oulet (reader, author, editor, publisher, etc)
+
+You can also send an email (the address is above) with the required information.  We will index only reputable and/or trustworth outlets according to our editorial. An editorial guideline is on roadmap , but we don't know when it will be published.
 
 In the technological side, we give priority to websites using WordPress and using the Fact Check schema in a LD+JSON markup. Our crawler and algorithms also prefer faster, accessible and secure (HTTPS) websites, specially those easily accessible by mobile phones and screenreaders.
 

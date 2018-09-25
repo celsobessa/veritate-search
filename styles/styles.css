@@ -118,7 +118,9 @@ body {
     width: 12px;
     height: 12px;
 }
-
+.mdl-card-wide {
+  width: 100%;
+}
 #hits .mdl-card__title-text {
   font-size: 21px;
   font-size: 1.5rem;

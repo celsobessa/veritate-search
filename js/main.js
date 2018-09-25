@@ -2,7 +2,7 @@
 const search = instantsearch({
   appId: 'H1N2UD238G',
   apiKey: '709235eadbf23a3d2f297ca22e205aed',
-  indexName: 'veritate_poc_3posts_post',
+  indexName: 'veritate_search_0_1_0_posts_post',
   routing: true
 });
 
@@ -26,14 +26,20 @@ search.addWidget(
     templates: {
       empty: 'No results',
       item: function (param) {
-        //console.log('param =');
-        //console.log(param);
         const title = param._highlightResult.post_title.value;
         const outlet = param.taxonomies_hierarchical.category.lvl0[0];
+        var cardMediaMarkup = '';
+        if ( param.images && param.images.medium && param.images.thumbnail ) {
+          const mediumUrl = param.images.medium.url;
+          const thumbnailUrl = param.images.thumbnail.url;
+          cardMediaMarkup = `
+            <div class="mdl-card__media">
+              <a href="${param.original_url}" target="_blank"><img class="article-image" src="${thumbnailUrl}" border="0" alt="${title}" srcset="${thumbnailUrl} 256w, ${mediumUrl} 480w" sizes="(max-width: 512px) 256px, (min-width: 513px) 480px"></a>
+            </div>
+          `;
+        };
         return `
-          <div class="mdl-card__media">
-            <a href="${param.original_url}" target="_blank"><img class="article-image" src="${param.images.thumbnail.url}" border="0" alt="${title}" srcset="${param.images.thumbnail.url} 256w, ${param.images.medium.url} 480w" sizes="(max-width: 512px) 256px, (min-width: 513px) 480px"></a>
-          </div>
+          ${cardMediaMarkup}
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text"><a href="${param.original_url}" target="_blank">${title}</a></h2>
           </div>
@@ -41,7 +47,7 @@ search.addWidget(
             <p>Por <strong>${param.original_authors}</strong> em <strong>${param.post_date_formatted}</strong> em <strong>${outlet}</strong></p>
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="${param.original_url}">Leia a íntegra em ${outlet}</a>
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="${param.original_url}" target="_blank">Leia a íntegra em ${outlet}</a>
           </div>`;
       }
     }
