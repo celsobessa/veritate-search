@@ -1,7 +1,7 @@
 /*
 Project: Veritate Fact Check Search
 Description: A search interface for fact checking articles using Veritate Initiative Public Index and API
-Version:     0.2.0
+Version:     0.3.1
 Author:      Celso Bessa
 Author URI:  https://www.celsobessa.com.br
 License:     GPL-2.0+
@@ -30,6 +30,14 @@ body {
   width: calc(100% - 48px);
   font-family: "Roboto Slab","Roboto","Helvetica","Arial",sans-serif;
 }
+.main-title a,
+.main-title a:visited {
+    color: rgba(255,255,255, 0.87);
+    text-decoration: none;
+}
+.main-title a:hover {
+    color: rgba(255,255,255, 1);
+}
 .main-title small {
   font-size: .5em;
   display: block;
@@ -40,7 +48,13 @@ body {
 }
 
 .mdl-layout__header-row .mdl-navigation__link {
-  color: #fff;
+    color: rgba(255,255,255, 0.87);
+}
+
+.mdl-layout__header-row .mdl-navigation__link:hover {
+    color: rgba(255,255,255, 1);
+    opacity: 1;
+    border-bottom: 1px solid #fff;
 }
 
 #search-wrapper {
@@ -103,20 +117,27 @@ body {
 
 .ais-search-box--reset-wrapper {
   display: block;
+  right: 0;
+  top: 1rem;
+  position: absolute;
 }
 
 .ais-search-box--reset {
-    cursor: pointer;
-    top: 5px;
-    right: 5px;
-    margin: 0;
+    background: none;
     border: 0;
+    cursor: pointer;
+    margin: 0;
     padding: 0;
+    right: 5px;
+    top: 5px;
 }
 .ais-search-box--reset svg {
     display: block;
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    width: 2rem;
+    height: 1.25rem;
 }
 .mdl-card-wide {
   width: 100%;
